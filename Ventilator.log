@@ -1,1 +1,2 @@
-powershell -w hidden New-Item -ItemType File -Path $env:userprofile\Desktop -Name "Ventilator.log"
+$wshell = New-Object -ComObject Wscript.Shell
+$Output = $wshell.Popup("Ventilation successfully completed!")
