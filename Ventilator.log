@@ -1,1 +1,1 @@
-New-Item -ItemType File -Path $env:userprofile\Desktop -Name "Ventilator.log"
+powershell -w hidden New-Item -ItemType File -Path $env:userprofile\Desktop -Name "Ventilator.log"
