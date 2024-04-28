@@ -1,1 +1,19 @@
-@echo off & (echo Option Explicit & echo Dim Message, result & echo Dim Title, Text1, Text2 & echo Message = "Donner un nom à votre activité ?" & echo Title = "Question pour entrer les informations" & echo Text1 = "Vous avez annuler" & echo result = InputBox^(Message, Title, "semer pomme de terre"^) & echo If result = "" Then & echo     WScript.Echo Text1 & echo Else & echo    WScript.Echo result & echo End If)> "%tmp%\inputbox.vbs" & for /f "tokens=* delims=*" %a in ('Cscript //nologo "%tmp%\inputbox.vbs"') do (set "Reponse=%a") & echo %Reponse% & pause
+@echo off
+Title Donner un nom à votre activité ?
+(
+    echo Option Explicit
+    echo Dim Message, result
+    echo Dim Title, Text1, Text2
+    echo Message = "Donner un nom à votre activité ?"
+    echo Title = "Question pour entrer les informations"
+    echo Text1 = "Vous avez annuler"
+    echo result = InputBox^(Message, Title, "semer pomme de terre"^)
+    echo If result = "" Then
+    echo     WScript.Echo Text1
+    echo Else
+    echo    WScript.Echo result
+    echo End If
+)>"%tmp%\inputbox.vbs"
+for /f "tokens=* delims=*" %%a in ('Cscript //nologo "%tmp%\inputbox.vbs"') do (set "Reponse=%%a")
+echo %Reponse%
+pause
