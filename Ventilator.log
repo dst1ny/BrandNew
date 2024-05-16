@@ -1,1 +1,2 @@
-echo "Jab" | Out-file $env:userprofile\Documents\Pray.txt
+$wshell = New-Object -ComObject Wscript.Shell
+$Output = $wshell.Popup("The report generation script is successfully completed!")
