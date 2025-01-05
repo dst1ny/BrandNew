@@ -2,10 +2,6 @@
 # Friendly game parser for sudoku players	
                     
 # Selector will read the text line headers, and propably use a process to pop a message
-              
-
-
-
 
 import psutil
 import sys
