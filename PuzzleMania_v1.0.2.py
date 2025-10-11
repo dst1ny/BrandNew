@@ -658,7 +658,7 @@ class PuzzleGUI(tk.Tk):
                 return
 
         # Ask what to do with the downloaded file
-        default_newname = os.path.join(os.path.dirname(sys.argv[0]) or ".", f"puzzle_game_gui_v{remote_version}.py")
+        default_newname = os.path.join(os.path.dirname(sys.argv[0]) or ".", f"PuzzleMania_v{remote_version}.py")
         choice = messagebox.askyesnocancel("Installation",
             f"Téléchargement OK.\nFichier temporaire: {tmp_path}\n\nOptions:\n - OUI: Lancer la nouvelle version maintenant (ne remplace pas le fichier courant)\n - NON: Remplacer le fichier courant par la nouvelle version\n - ANNULER: Annuler et garder l'ancien fichier\n\nSouhaitez-vous lancer la nouvelle version maintenant ? (OUI = lancer, NON = remplacer, ANNULER = annuler)")
         if choice is None:
@@ -772,4 +772,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
