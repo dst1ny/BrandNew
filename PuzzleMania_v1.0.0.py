@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # coding: utf-8
 """
-puzzle_game_gui.py
+PuzzleMania.py
 
 Jeu de puzzles en GUI (Tkinter) :
 - 3 puzzles : Anagramme, Cible Math, Mastermind numérique
@@ -37,9 +37,8 @@ import shutil
 # Configuration & Data
 # ----------------------------
 LEADERBOARD_FILE = "leaderboard_gui.json"
-# --- Auto-update configuration (à personnaliser) ---
-CURRENT_VERSION = "1.0.0"  # modifie cette valeur à chaque release
-UPDATE_INFO_URL = "https://raw.githubusercontent.com/dst1ny/BrandNew/refs/heads/main/version.json"  # ex: http://server/updates/version.json
+CURRENT_VERSION = "1.0.2"
+UPDATE_INFO_URL = "https://raw.githubusercontent.com/dst1ny/BrandNew/refs/heads/main/version.json"
 # ----------------------------------------------------------------------
 
 WORD_LIST = [
@@ -773,3 +772,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
